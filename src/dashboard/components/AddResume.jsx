@@ -3,6 +3,7 @@ import {SquarePlus} from "lucide-react"
 import { v4 as uuidv4 } from 'uuid';
 import GlobalApi from '../../../service/GlobalApi';
 import { useUser } from '@clerk/clerk-react';
+import { useNavigate } from 'react-router-dom';
 
 
 const AddResume = () => {
@@ -11,6 +12,7 @@ const AddResume = () => {
  const [resumeTitle,setResumeTitle]=useState()
  const {user}=useUser()
  const [loading,setLoading]=useState(false)
+ const nagivation=useNavigate()
 
  const onCreate=async()=> {
   setLoading(true)
@@ -28,6 +30,7 @@ const AddResume = () => {
     console.log(resp);
     if(resp){
       setLoading(false)
+      nagivation('/dashboard/resume/'+uuid+'/edit')
     }
     
   },(error)=>{
