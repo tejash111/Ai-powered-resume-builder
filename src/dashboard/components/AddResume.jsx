@@ -27,10 +27,10 @@ const AddResume = () => {
   }
 
   GlobalApi.CreateNewResume(data).then(resp=>{
-    console.log(resp);
+    console.log(resp.data.data.documentId);
     if(resp){
       setLoading(false)
-      nagivation('/dashboard/resume/'+uuid+'/edit')
+      nagivation('/dashboard/resume/'+resp.data.data.documentId+'/edit')
     }
     
   },(error)=>{
@@ -39,7 +39,12 @@ const AddResume = () => {
  }
   return (
     <div>
-    <div onClick={()=>setOpenDialog(true)} className='p-14 py-24 items-center flex justify-center bg-gray-200 rounded-lg mt-10 h-70 hover:scale-105 transition-all hover:shadow-md cursor-pointer '>
+    <div onClick={()=>setOpenDialog(true)} className='"p-14 py-24 flex items-center justify-center 
+bg-gray-900/30 backdrop-blur-lg rounded-lg 
+mt-10 h-70 hover:scale-105 transition-all 
+hover:shadow-2xl shadow-black/50 cursor-pointer ml-4 
+gap-5 border border-gray-500/20 hover:bg-gray-800/40 
+hover:shadow-blue-500/30"'>
        <SquarePlus/>
     
     </div>

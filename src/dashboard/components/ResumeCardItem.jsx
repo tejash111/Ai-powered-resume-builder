@@ -5,7 +5,12 @@ import { Link } from 'react-router-dom'
 const ResumeCardItem = ({resume,key}) => {
   return (
     <Link to={'/dashboard/resume/'+resume.resumeId+'/edit'}>
-        <div className='p-14 py-24 items-center flex justify-center bg-gray-300 rounded-lg mt-10 h-70 hover:scale-105 transition-all hover:shadow-md cursor-pointer ml-4 gap-5 hover:105  hover:border-1 border-black '>
+        <div className="p-14 py-24 flex items-center justify-center 
+bg-blue-900/30 backdrop-blur-lg rounded-lg 
+mt-10 h-70 hover:scale-105 transition-all 
+hover:shadow-2xl shadow-black/50 cursor-pointer ml-4 
+gap-5 border border-blue-500/20 hover:bg-blue-800/40 
+hover:shadow-blue-500/30">
            <Notebook/>
         </div>
         <h2 className='text-center my-1 '>{resume.title}</h2>
