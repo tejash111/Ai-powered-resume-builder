@@ -4,6 +4,8 @@ import PersonalDetailPreview from './preview/PersonalDetailPreview'
 import SummaryPreview from './preview/SummaryPreview'
 import ExperiencePreview from './preview/ExperiencePreview'
 import SkillsPreview from './preview/SkillsPreview'
+import Projects from './preview/Projects'
+import Education from './preview/EducationalPreview'
 
 const ResumePreview = () => {
 
@@ -15,14 +17,20 @@ const ResumePreview = () => {
      
         {/* personal details  here why the question mark reqd*/}
           <PersonalDetailPreview resumeInfo={resumeInfo}/>
+          
         {/* summary */}
           <SummaryPreview resumeInfo={resumeInfo}/>
-        {/* professional experience */}
-        <ExperiencePreview resumeInfo={resumeInfo}/>
-        {/* education */}
 
         {/* skills */}
         <SkillsPreview resumeInfo={resumeInfo}/>
+        {/* projects */}
+        <Projects resumeInfo={resumeInfo}/>
+        {/* education */}
+        <Education resumeInfo={resumeInfo}/>
+        {/* professional experience */}
+         <ExperiencePreview  resumeInfo={resumeInfo}/> 
+        
+
     </div>
   )
 }
