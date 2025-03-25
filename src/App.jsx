@@ -14,6 +14,7 @@ const App = () => {
       {/*we render childeren through this} */}
      <Header/>
      <Outlet/>
+     
     </div>
   )
 }

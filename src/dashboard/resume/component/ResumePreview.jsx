@@ -12,7 +12,7 @@ const ResumePreview = () => {
   const {resumeInfo,setResumeInfo}=useContext(ResumeInfoContext)
 
   return (
-    <div className='shadow-lg h-full p-14 border-t-[20px] border-gray-400 ' style={{borderColor:resumeInfo?.themeColor}}>
+    <div className='shadow-2xl h-full p-14  border-gray-400 ' style={{borderColor:resumeInfo?.themeColor}}>
       
      
         {/* personal details  here why the question mark reqd*/}

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const ResumeCardItem = ({resume,key}) => {
   return (
-    <Link to={'/dashboard/resume/'+resume.resumeId+'/edit'}>
+    <Link to={'/dashboard/resume/'+resume.documentId+'/edit'}>
         <div className="p-14 py-24 flex items-center justify-center 
 bg-blue-900/30 backdrop-blur-lg rounded-lg 
 mt-10 h-70 hover:scale-105 transition-all 

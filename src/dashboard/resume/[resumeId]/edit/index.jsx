@@ -21,7 +21,7 @@ const EditResume = () => {
         {/* form section */}
         <FormSection/>
         {/* previesection */}
-         
+         <ResumePreview/>
 
     </div>
     </ResumeInfoContext.Provider>
