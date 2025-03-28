@@ -10,6 +10,7 @@ import { ClerkProvider } from '@clerk/clerk-react'
 import EditResume from './dashboard/resume/[resumeId]/edit/index.jsx'
 
 
+
 //importing key
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
   {
     element:<App/>,
     children:[
+      
       {
         path:"dashboard",
         element:<Dashboard/>

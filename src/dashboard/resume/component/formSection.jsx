@@ -4,6 +4,8 @@ import PersonalDetail from './forms/personalDetail'
 import { ArrowLeft, ArrowRight ,LayoutGrid} from 'lucide-react'
 import Summary from './forms/Summary'
 import ExperienceForm from './forms/Experience'
+import Education from './preview/EducationalPreview'
+
 
 const FormSection = () => {
   const [activeFormIndex,setActiveFormIndex]=useState(1);
@@ -22,9 +24,9 @@ const FormSection = () => {
      
          {activeFormIndex==1? <PersonalDetail enableNext={
           (v)=>setEnableNext(v)
-         } /> : activeFormIndex==2?<Summary enableNext={
+         } /> :activeFormIndex==2?<ExperienceForm enableNext={
           (v)=>setEnableNext(v)
-         }/>:activeFormIndex==3?<ExperienceForm enableNext={
+         }/>: activeFormIndex==3? <Education enableNext={
           (v)=>setEnableNext(v)
          }/>:null }
       

@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.25.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@google/generative-ai": "^0.24.0",
+    "@mui/material": "^6.4.8",
     "@tailwindcss/vite": "^4.0.14",
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.8.4",
@@ -22,6 +25,7 @@
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.4.0",
+    "react-simple-wysiwyg": "^3.2.2",
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.0.14",
     "uuid": "^11.1.0"

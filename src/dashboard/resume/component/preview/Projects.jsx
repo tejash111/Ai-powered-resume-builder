@@ -1,10 +1,11 @@
+import { Bold } from 'lucide-react';
 import React from 'react';
 
 const Projects = ({ resumeInfo }) => {
   return (
     <div className="my-6">
       <h2
-        className="text-center font-bold text-sm text-xl mb-2"
+        className="text-center font-bold  text-xl mb-2"
         style={{ color: resumeInfo?.themeColor }}
       >
         Projects
@@ -13,21 +14,37 @@ const Projects = ({ resumeInfo }) => {
 
       <div className="mt-2">
         {resumeInfo?.projects?.map((project, index) => (
-          <div key={index} className="mb-2 p-4 border rounded-lg shadow-sm">
-            <h3 className="font-semibold text-md">{project.name}</h3>
+          <div key={index} className="mb-2 p-4  rounded-lg shadow-sm ">
+            <h3 className="font-semibold text-sm">{project.name}</h3>
             <p className="text-gray-600 text-sm">{project.description}</p>
-            <p className="text-sm mt-1">
-              <strong>Tech Stack:</strong> {project.tech_stack.join(', ')}
-            </p>
-            <div className="text-sm mt-2">
-              <a href={project.github_link} target="_blank" rel="noopener noreferrer" className="text-blue-600 mr-2">
-                GitHub
-              </a>
-              |
-              <a href={project.live_demo} target="_blank" rel="noopener noreferrer" className="text-blue-600 ml-2">
-                Live Demo
-              </a>
-            </div>
+
+            <div className="flex items-center flex-wrap gap-2 justify-between" >
+  <p className="text-sm">
+  <strong>Tech Stack:</strong>   {project.tech_stack.join(', ')}
+  </p>
+ <div>
+ <a
+    href={project.github_link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-600 text-sm mr-2"
+  >
+    GitHub
+  </a>
+  <span>|</span>
+  <a
+    href={project.live_demo}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-600 text-sm ml-2"
+  >
+    Live Demo
+  </a>
+ </div>
+</div>
+             
+            
+           
           </div>
         ))}
       </div>

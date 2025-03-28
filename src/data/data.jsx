@@ -13,11 +13,11 @@ export default  {
 
     skills: [
       {languages : [
-      { id: 1, name: "JavaScript", rating: 50 },
-  { id: 2, name: "React", rating: 50 },
-  { id: 3, name: "Node.js", rating: 40 },
-  { id: 4, name: "MongoDB", rating: 40 },
-  { id: 5, name: "Tailwind CSS", rating: 50 } ]
+      { id: 1, name: "JavaScript", rating: 80 },
+  { id: 2, name: "React", rating: 70 },
+  { id: 3, name: "Node.js", rating: 30},
+  { id: 4, name: "MongoDB", rating: 60 },
+  { id: 5, name: "Tailwind CSS", rating: 90 } ]
       },
     {techologiesAndTools: "AWS,EC2,DynamoDB,lambda,SQS,spark,Kubernetes"  }
 
@@ -56,8 +56,7 @@ export default  {
         id: 1,
         title: "Software Engineer",
         companyName: "Tech Innovators Inc.",
-        city: "San Francisco",
-        state: "CA",
+        place: "San Francisco ,CA",
         startDate: "2020-06-01",
         endDate: "2023-08-01",
         currentlyWorking: false,
@@ -67,8 +66,8 @@ export default  {
         id: 2,
         title: "Frontend Developer",
         companyName: "Creative Solutions Ltd.",
-        city: "New York",
-        state: "NY",
+        place: "New York ,NY",
+        
         startDate: "2018-04-01",
         endDate: "2020-05-30",
         currentlyWorking: false,

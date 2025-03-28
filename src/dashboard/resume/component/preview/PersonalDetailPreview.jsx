@@ -11,7 +11,7 @@ const PersonalDetailPreview = ({resumeInfo}) => {
         <h1 className='font-bold text-2xl text-center'
         style={{color:resumeInfo?.themeColor}}
         >{resumeInfo?.firstName} {resumeInfo?.lastName}</h1>
-        <h2 style={{color:resumeInfo?.themeColor}} className='text-center text-sm font-medium mt-1'>{resumeInfo?.jobTitle}</h2>
+        <h2 style={{color:resumeInfo?.themeColor}} className='text-center text-sm font-medium '>{resumeInfo?.jobTitle}</h2>
         <div className='flex justify-center gap-2 text-sm '>
           
         <h2  style={{color:resumeInfo?.themeColor}} className='text-center font-normal flex gap-1'><MdEmail   className='mt-1'/> {resumeInfo?.email}</h2>
