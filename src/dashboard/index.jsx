@@ -15,7 +15,6 @@ const Dashboard = () => {
       }
   }, [isLoaded, user]);
 
-    // used to get user resumesList
     const GetResumesList=()=>{
       GlobalApi.GetUserResumes(user?.primaryEmailAddress?.emailAddress)
       .then(resp=>{

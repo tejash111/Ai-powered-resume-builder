@@ -4,8 +4,9 @@ import PersonalDetailPreview from './preview/PersonalDetailPreview'
 import SummaryPreview from './preview/SummaryPreview'
 import ExperiencePreview from './preview/ExperiencePreview'
 import SkillsPreview from './preview/SkillsPreview'
-import Projects from './preview/Projects'
+
 import Education from './preview/EducationalPreview'
+
 
 const ResumePreview = () => {
 
@@ -24,7 +25,6 @@ const ResumePreview = () => {
         {/* skills */}
         <SkillsPreview resumeInfo={resumeInfo}/>
         {/* projects */}
-        <Projects resumeInfo={resumeInfo}/>
          {/* professional experience */}
          <ExperiencePreview  resumeInfo={resumeInfo}/> 
         {/* education */}

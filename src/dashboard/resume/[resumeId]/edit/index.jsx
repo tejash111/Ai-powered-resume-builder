@@ -3,16 +3,25 @@ import { useParams } from 'react-router-dom'
 import FormSection from '../../component/formSection'
 import ResumePreview from '../../component/ResumePreview'
 import { ResumeInfoContext } from '../../../../context/ResumeInfoContext'
-import data from '../../../../data/data'
+import { GalleryThumbnails } from 'lucide-react'
+import GlobalApi from '../../../../../service/GlobalApi'
 
 const EditResume = () => {
-    const params=useParams()
-    const [resumeInfo,setResumeInfo]=useState(data)
+    const {resumeId}=useParams()
+    const [resumeInfo,setResumeInfo]=useState()
 
     useEffect(()=>{
-        setResumeInfo(data)
-        
+       
+        GetResumeInfo();
     },[])
+
+    const GetResumeInfo=()=>{
+     GlobalApi.GetResumeById(resumeId).then(resp=>{
+      console.log(resp.data.data);
+      setResumeInfo(resp.data.data)
+      
+     })
+    }
 
   return (
     <ResumeInfoContext.Provider value={{resumeInfo,setResumeInfo}}>

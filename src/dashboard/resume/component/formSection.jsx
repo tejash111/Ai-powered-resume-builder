@@ -1,10 +1,16 @@
 import React, { useState } from 'react'
 import ResumePreview from './ResumePreview'
 import PersonalDetail from './forms/personalDetail'
-import { ArrowLeft, ArrowRight ,LayoutGrid} from 'lucide-react'
+import { ArrowLeft, ArrowRight ,Home,LayoutGrid} from 'lucide-react'
 import Summary from './forms/Summary'
 import ExperienceForm from './forms/Experience'
-import Education from './preview/EducationalPreview'
+import EducationForm from './forms/EducationForm'
+import ProjectForm from './forms/ProjectForm'
+import { Link } from 'react-router-dom'
+import Skills from './forms/SkillsFom'
+
+
+
 
 
 const FormSection = () => {
@@ -15,7 +21,14 @@ const FormSection = () => {
     <div className="">
 
       <div className='flex justify-between items-center'>
-        <button  variant="outline" size="sm" className='btn btn-primary flex gap-2'><LayoutGrid /> Theme </button>
+        <div className='flex gap-3 '>
+        <Link to={"/dashboard"}>
+          <button className='btn btn-primary cursor-pointer'><Home/></button>
+          </Link>
+      
+        <button  size="sm" className='btn btn-primary flex gap-2'><LayoutGrid /> Theme </button>
+        </div>
+          
         <div className='flex gap-2'>
           {activeFormIndex>1&&<button onClick={()=> setActiveFormIndex(activeFormIndex-1)} className='btn btn-primary' size="sm"><ArrowLeft/> </button>}
           <button disabled={!enableNext} onClick={()=> setActiveFormIndex(activeFormIndex+1)} className='btn btn-primary '> Next <ArrowRight/></button>
@@ -24,11 +37,14 @@ const FormSection = () => {
      
          {activeFormIndex==1? <PersonalDetail enableNext={
           (v)=>setEnableNext(v)
-         } /> :activeFormIndex==2?<ExperienceForm enableNext={
+         } /> :activeFormIndex==2?<  EducationForm enableNext={
           (v)=>setEnableNext(v)
-         }/>: activeFormIndex==3? <Education enableNext={
+         }/>: activeFormIndex==3? <Skills enableNext={
           (v)=>setEnableNext(v)
-         }/>:null }
+         }/>:activeFormIndex==4?<ExperienceForm enableNext={
+          (v)=>setEnableNext(v)
+         } />:null} 
+        
       
 
       

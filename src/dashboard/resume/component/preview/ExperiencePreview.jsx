@@ -1,27 +1,38 @@
-import React from 'react';
+import React from 'react'
 
-const Experience = ({ resumeInfo }) => {
+
+
+function ExperiencePreview({resumeInfo}) {
   return (
-    <div className="my-4">
-      <h2 className="text-center font-bold text-xs mb-1" style={{ color: resumeInfo?.themeColor }}>
-        Experience
-      </h2>
-      <hr className="border" style={{ borderColor: resumeInfo?.themeColor }} />
+    <div className='my-6'>
+        <h2 className='text-center font-bold text-sm mb-2'
+        style={{
+            color:resumeInfo?.themeColor
+        }}
+        >Professional Experience</h2>
+        <hr style={{
+            borderColor:resumeInfo?.themeColor
+        }} />
 
-      <div className="mt-3">
-        {resumeInfo?.experience?.map((job, index) => (
-          <div key={index} className="mb-3 p-3 border rounded shadow-sm">
-            <h3 className="font-semibold text-sm">{job.title} at {job.companyName}</h3>
-            <p className="text-gray-600 text-xs">{job.place}</p>
-            <p className="text-xs mt-1">
-              <strong>Duration:</strong> {job.startDate} - {job.currentlyWorking ? "Present" : job.endDate}
-            </p>
-            <div className='text-xs' dangerouslySetInnerHTML={{__html:job?.workSummary}}/>
-          </div>
+        {resumeInfo?.Experience?.map((experience,index)=>(
+            <div key={index} className='my-5'>
+                <h2 className='text-sm font-bold'
+                 style={{
+                    color:resumeInfo?.themeColor
+                }}>{experience?.experienceTitle}</h2>
+                <h2 className='text-xs flex justify-between'>{experience?.companyName}, 
+                {experience?.city}, 
+                {experience?.state}
+                <span>{experience?.startDate1} To {experience?.currentlyWorking?'Present':experience.endDate1} </span>
+                </h2>
+                {/* <p className='text-xs my-2'>
+                    {experience.workSummery}
+                </p> */}
+                <div className='text-xs my-2' dangerouslySetInnerHTML={{__html:experience?.workSummery}} />
+            </div>
         ))}
-      </div>
     </div>
-  );
-};
+  )
+}
 
-export default Experience;
+export default ExperiencePreview

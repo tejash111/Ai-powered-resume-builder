@@ -20,11 +20,11 @@ const Projects = ({ resumeInfo }) => {
 
             <div className="flex items-center flex-wrap gap-2 justify-between" >
   <p className="text-sm">
-  <strong>Tech Stack:</strong>   {project.tech_stack.join(', ')}
+  <strong>Tech Stack:</strong>   {project.techStack}
   </p>
  <div>
  <a
-    href={project.github_link}
+    href={project.githubLink}
     target="_blank"
     rel="noopener noreferrer"
     className="text-blue-600 text-sm mr-2"
@@ -33,7 +33,7 @@ const Projects = ({ resumeInfo }) => {
   </a>
   <span>|</span>
   <a
-    href={project.live_demo}
+    href={project.liveDemo}
     target="_blank"
     rel="noopener noreferrer"
     className="text-blue-600 text-sm ml-2"

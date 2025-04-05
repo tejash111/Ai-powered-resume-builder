@@ -15,11 +15,10 @@ const Education = ({ resumeInfo }) => {
         {resumeInfo?.education?.map((edu, index) => (
           <div key={index} className="mb-4 p-4 border rounded-lg shadow-sm">
             <h3 className="font-semibold text-md">{edu.universityName}</h3>
-            <p className="text-gray-600 text-sm">{edu.degree} in {edu.major}</p>
+            <p className="text-sm mt-1"> <strong>Course: </strong>{edu.courseName} </p>
             <p className="text-sm mt-1">
               <strong>Duration:</strong> {edu.startDate} - {edu.endDate}
             </p>
-            <p className="text-sm mt-1 text-gray-600">{edu.description}</p>
           </div>
         ))}
       </div>
